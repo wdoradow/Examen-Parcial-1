@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 15px;
+  padding: 0;
+}
+
+main {
+  display: flex;
+}
+
+.logo{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.logo > img {
+  width: 50px;
+}
+
+.navbar {  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(72, 73, 73);
+  color: #fff;
+  padding-right: 20px;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.menu {
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.hamburger{
+  cursor: pointer;
+}
+
+.menu > li {
+  cursor: pointer;
+  color: #fff;
+}
+
+.menu >li:hover{
+  background-color: teal;
+  padding-right: 20px;
+}
+
+.social {
+  text-decoration: none;
+  padding: 0;
+  width: 100%;
+}
+
+.social_icon {
+  display: inline;
+  text-align: center;
+  margin-left: 25%;
+}
+
+@media screen and (max-width: 767px) {
+  header{
+    text-align: center;
+  }
+  
+  .navbar{
+    display: block;
+    padding-right: 5px;
+  }
+  
+  .menu {
+    padding: 0;
+    display: none;
+  }
+
+  .menu >li{
+    display: block;
+  }
+
+  .navbar:hover .menu{
+    display: block;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .product {
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    border: rgb(109, 109, 109) 1px solid;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header{
+    align-items: center;
+    display: flex;  
+  }
+  
+  .navbar{
+    display: block;
+    padding-right: 5px;
+  }
+  
+  .menu {
+    padding: 0;
+    display: none;
+  }
+
+  .menu >li{
+    display: block;
+  }
+
+  .navbar:hover .menu{
+    display: block;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .product {
+    text-align: center;
+    padding: 5px;
+    margin: 1px;
+    border: rgb(214, 212, 212) 1px solid;
+    border-radius: 5px;
+  }
+
+  .product > p {
+    text-align: left;
+  }
+  .social {
+    border-top: rgb(214, 212, 212) 1px solid;
+    padding-top: 15px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  header{
+    align-items: center;
+    display: flex;  
+  }
+  
+  .hamburger {
+    visibility: hidden;
+  }
+
+  .menu > li{
+    display: inline;
+    margin-left: 50px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  .product {
+    text-align: center;
+    margin: 15px;
+    padding: 5px;
+    border: rgb(194, 194, 194) 1px solid;
+    border-radius: 5px;
+    width: 33%;
+  }
+
+  .product > p {
+    text-align: left;
+  }
+
+  .social {
+    border-top: rgb(194, 194, 194) 1px solid;
+    padding-top: 15px;
+  }
+}
