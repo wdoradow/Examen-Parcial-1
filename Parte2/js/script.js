@@ -12,8 +12,22 @@
 
         Realiza todo lo anterior al hacer click en el botón. 
         */
+       
+        let btn_minusculas = document.getElementById("btn_minusculas").addEventListener("click", minusculas)
 
+      function minusculas(e) {
+        e.preventDefault()
+        let namesTextArea = document.getElementById("txt_may")
+        let names = namesTextArea.value.split(",")
+        names.forEach((element, index) => {
+          names[index] = element.toLowerCase()});
 
+        namesTextArea.value = names.toString() 
+    }
+        /*let arreglo=document.getElementById("text_may").value /*
+        
+          
+        
       /*
         Crea una funcion llamada "calculateDogAge" que: 
     
@@ -25,8 +39,14 @@
            Deberás convertir el string a Entero. 
     
     */
+           let btn_añoshumano = document.getElementById("btn_añoshumano").addEventListener("click", calculateDogAge)
 
-
+           function calculateDogAge(e) {
+             e.preventDefault()
+             let edadP = parseInt(document.getElementById("edad_humano").value) * 7
+             document.getElementById("edad_perro").value = edadP
+            
+          }
 
       /*  OBJETOS 
     
@@ -43,5 +63,29 @@
        El Nombre y la Especie son Strings, Ataque y Defensa numericos.
        
        Registra un evento de "click", para que cuando se de click en el botón, se muestren las propiedades de cada objeto en el input correspondiente. 
-
+        
+       
      */
+       let btn_muestra = document.getElementById("btn_muestra").addEventListener("click", Pokemons)
+       function Pokemons(e) {
+        e.preventDefault()
+        document.getElementById("nombre_poke1").value = Zabdos.nombre
+        document.getElementById("especie_poke1").value = Zabdos.especie
+        document.getElementById("ataque_poke1").value = Zabdos.ataque
+        document.getElementById("defensa_poke1").value = Zabdos.defensa
+        document.getElementById("nombre_poke2").value = charizard.nombre
+        document.getElementById("especie_poke2").value = charizard.especie
+        document.getElementById("ataque_poke2").value = charizard.ataque
+        document.getElementById("defensa_poke2").value = charizard.defensa
+      }
+
+      function Pokemon(nombre, especie, ataque, defensa) {
+        this.nombre = nombre
+        this.especie = especie
+        this.ataque = ataque
+        this.defensa = defensa
+      }
+      
+      let Zabdos = new Pokemon("Zabdos", "Eléctrico", 200, 150)
+      let charizard = new Pokemon("Charizard", "Fuego/Volador", 140, 90)
+      //
