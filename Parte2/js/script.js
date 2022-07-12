@@ -88,4 +88,4 @@
       
       let Zabdos = new Pokemon("Zabdos", "Eléctrico", 200, 150)
       let charizard = new Pokemon("Charizard", "Fuego/Volador", 140, 90)
-      //
+      // los pokemones legendarios rifan
